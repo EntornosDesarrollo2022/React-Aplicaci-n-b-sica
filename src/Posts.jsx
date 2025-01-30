@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Comentarios from './Comentarios'
 
 function Posts (){
   const [posts, setPosts] = useState([])
@@ -38,6 +39,7 @@ function Posts (){
             <h2>{post.title}</h2>
             <p>{post.body}</p>
             <h1>Autor: {user ? user.name : "Desconocido"}</h1>
+            <Comentarios postId={post.id}></Comentarios>
           </div>
         );
       })}
